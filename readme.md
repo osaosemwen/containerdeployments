@@ -1,5 +1,7 @@
 "This application is principally for to showcase how cloud application scaled across different geographical regions using dockers first, in which ELB can be used in managing traffics across, it is pricipally with dockers, the writeup is adapted from a couple of docker documentations referenced below"
 
+![dockerswarm on aws cloud simple usecase](https://user-images.githubusercontent.com/17884787/38647160-ecbde85a-3db8-11e8-849d-600f782d8dc2.png)
+
 # Use Case 1: Deploy a and scale application accross various VMs using docker.
 
 ##### Prequisites:
