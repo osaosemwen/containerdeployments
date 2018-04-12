@@ -104,7 +104,8 @@ The docker swarm compose file instructs the swarm to auto configure another inst
 you would have a display similar to that shown below: 
 
 ![mikepractceweb](https://user-images.githubusercontent.com/17884787/38653621-a4ac5918-3dd9-11e8-9aa1-0b6e5e92a2de.png)
-you can practically test this first run ``` $ docker container ls -a ``` this lists all active containers including the 7 created on the docker swarm. Copy, Stop, kill and remove one of the images ID using the following lines: 
+
+You can practically test this first run ``` $ docker container ls -a ``` this lists all active containers including the 7 created on the docker swarm. Copy, Stop, kill and remove one of the images ID using the following lines: 
 
 - ``` $ docker container stop imageid           # This stops the specified container ```
 - ``` $ docker container kill imageid           # Forces shutdown of the specified container ```
