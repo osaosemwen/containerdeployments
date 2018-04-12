@@ -10,10 +10,10 @@
 - Install Dockers and test its function "with ```$ dockers ps``` " or ``` $ docker run hello-world ```
 - clone this repo using ``` $ git clone https://github.com/osaosemwen/containerdeployments ```
 - Install docker-machine Dev, Test1 and Test2 on your PC, using the following command
- ``` $ docker-machine create --driver virtualbox dev ```
-"Note if this line does not work do not panic, either simply change your ISP i.e. go to a different location or router or follow the instruction from the git hub docker machine issues, or from stackoverflow"
-Where dev can be test1 and test2 for subsequent installations  
+ ``` $ docker-machine create --driver virtualbox dev ```  
 - Lastly, create an account on docker hub. 
+"Note:" if this line does not work do not panic, either simply change your ISP i.e. go to a different location or router or follow the instruction from the git hub docker machine issues, or from stackoverflow"
+Where dev can be test1 and test2 for subsequent installations
 
 #### Containerize the application
 
