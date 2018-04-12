@@ -127,7 +127,7 @@ In the previous deployment, the swarm was deployed on a signle machine housing a
 
 You should have something similar to:
 
-![docker-machine image](https://user-images.githubusercontent.com/17884787/38658123-b4bd7086-3df1-11e8-823c-fe99965fe307.png)
+![docker-machine](https://user-images.githubusercontent.com/17884787/38658848-d5e16eae-3df4-11e8-97a9-102bf7994d1d.png)
 
 This shows only the default docker-machine is on and active. If your is all active let it be, if not run following lines: 
 
