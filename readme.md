@@ -105,9 +105,9 @@ you would have a display similar to that shown below:
 ![mikepractceweb](https://user-images.githubusercontent.com/17884787/38653621-a4ac5918-3dd9-11e8-9aa1-0b6e5e92a2de.png)
 you can practically test this first run ``` $ docker container ls -a ``` this list all active containers including the 7 created on the docker swarm. Copy, Stop and kill one of the images 
 
-``` $ docker container stop imageid           # This stops the specified container
-    $ docker container kill imageid           # Forces shutdown of the specified container
-    $ docker container rm imageid             # Remove specified container from this machine ```
+``` $ docker container stop imageid           # This stops the specified container ```
+``` $ docker container kill imageid           # Forces shutdown of the specified container ```
+``` $ docker container rm imageid             # Remove specified container from this machine ```
 
 The swarm will auto-configure a new container so as to maintain 7 containers in the swarm.
 
