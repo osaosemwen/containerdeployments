@@ -1,8 +1,8 @@
-"This application is principal, to showcase how cloud application can be scalled across different geographical regions using dockers first, in which ELB can be used in managing traffics across, it is pricipally with dockers, the writeup is adapted from a couple of docker documentations referenced below"
+"This application is principal to showcase how cloud applications can be scaled across different geographical regions using dockers first, in which ELB can be used in managing traffics across, it is pricipally with dockers, the writeup is adapted from a couple of docker documentations referenced below"
 
 ![dockerswarm on aws cloud simple usecase](https://user-images.githubusercontent.com/17884787/38647160-ecbde85a-3db8-11e8-849d-600f782d8dc2.png)
 
-# Use Case 1: Deploy a and scale application accross various VMs using docker.
+# Use Case 1: Deploy an application and scale it accross various VMs using docker.
 
 #### Prequisites:
 
@@ -78,6 +78,28 @@ Go to the file docker-compose-1.yml using your favorite, either VIM, nano, vi, e
 
 This docker-compose.yml tells docker to pull the image from your docker hub registry, run the image under the web service with each image consuming 7% of the CPU, and scale the application over 7 instances each consuming 70MB of RAM, Map its port 5050 of the "web service" port to the containers port 80 
 load balnce the "web container's" port 5050 over a load balanced network webtest and define this webtest network
+
+#### Running the swarm of containers
+
+First run 
+
+``` $ docker swarm init ```
+
+Next run 
+
+``` $ docker stack deploy -c docker-compose-1.yml mikedockerspractice ```
+
+This will scale the application web over 7 instances in the network environment webtest. Use the following to confirm your deployments.
+
+```$ docker service ls ```
+#### Note
+The docker swarm compose file instructs the swarm to auto configure another instance in case of any failure, this is why when you run 
+
+``` $ docker service ps mikedockerpractise_web ```
+
+you would have a display similar to that shown below: 
+
+
 
 
 
