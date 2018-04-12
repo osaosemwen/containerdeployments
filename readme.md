@@ -11,7 +11,7 @@
 - clone this repo using ``` $ git clone https://github.com/osaosemwen/containerdeployments ```
 - Install docker-machine Dev, Test1 and Test2 on your PC, using the following command
  ``` $ docker-machine create --driver virtualbox dev ```
-
+"Note if this line does not work do not panic, either simply change your ISP i.e. go to a different location or router or follow the instruction from the git hub docker machine issues, or from stackoverflow"
 Where dev can be test1 and test2 for subsequent installations  
 - Lastly, create an account on docker hub. 
 
@@ -103,13 +103,18 @@ The docker swarm compose file instructs the swarm to auto configure another inst
 you would have a display similar to that shown below: 
 
 ![mikepractceweb](https://user-images.githubusercontent.com/17884787/38653621-a4ac5918-3dd9-11e8-9aa1-0b6e5e92a2de.png)
-you can practically test this first run ``` $ docker container ls -a ``` this list all active containers including the 7 created on the docker swarm. Copy, Stop and kill one of the images 
+you can practically test this first run ``` $ docker container ls -a ``` this lists all active containers including the 7 created on the docker swarm. Copy, Stop, kill and remove one of the images ID using the following lines: 
 
 - ``` $ docker container stop imageid           # This stops the specified container ```
 - ``` $ docker container kill imageid           # Forces shutdown of the specified container ```
 - ``` $ docker container rm imageid             # Remove specified container from this machine ```
 
 The swarm will auto-configure a new container so as to maintain 7 containers in the swarm.
+#### Clean-up
+Next clean up this deployment by:
+- ``` $ docker stack rm mikedockerspractice  # This removes all 7 container deployed on the swarm ```
+- ``` $ docker swarm leave --force  # This forces the swarm to be destroyed or vacate all VMs. ```
+- ``` $ docker container ls ``` # to check for list of containers as well as confirm the dissolution of the swarm.
 
  
 
