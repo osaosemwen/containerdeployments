@@ -12,12 +12,13 @@
 - Install docker-machine Dev, Test1 and Test2 on your PC, using the following command
  ``` $ docker-machine create --driver virtualbox dev ```  
 - Lastly, create an account on docker hub. 
+
 "Note:" if this line does not work do not panic, either simply change your ISP i.e. go to a different location or router or follow the instruction from the git hub docker machine issues, or from stackoverflow"
 Where dev can be test1 and test2 for subsequent installations
 
 #### Containerize the application
 
-The Dockerfile simply instructs the build to be from python image, copy contents of current directory to ./app directory, next, install the need packages as shwon in requiremens then expose the container port 80, (Its this port no that would be referenced when running the image. 
+First change to the cloned repo directory, the Dockerfile simply instructs the build to be from python image, copy contents of current directory to ./app directory, next, install the need packages as shwon in requiremens then expose the container port 80, (Its this port no that would be referenced when running the image. 
 - First build it using the Docker command
  
  ``` $ docker build -t osemikepractice . ```
@@ -115,6 +116,25 @@ Next clean up this deployment by:
 - ``` $ docker stack rm mikedockerspractice  # This removes all 7 container deployed on the swarm ```
 - ``` $ docker swarm leave --force  # This forces the swarm to be destroyed or vacate all VMs. ```
 - ``` $ docker container ls ``` # to check for list of containers as well as confirm the dissolution of the swarm.
+###  Increasing the Swarm nodes
+
+In the previous deployment, the swarm was deployed on a signle machine housing all 7 containers. This time we spread the 7 instances across all VMs 
+
+#### First run:
+ 
+``` $ docker-machine ls ```
+
+You should have something similar to:
+
+![docker-machine image](https://user-images.githubusercontent.com/17884787/38658123-b4bd7086-3df1-11e8-823c-fe99965fe307.png)
+
+This shows only the default docker-machine is on and active. If your is all active let it be, if not run following lines: 
+
+``` $ docker-machine start dev ``` write the following changing dev for test1 and test2.
+
+#### Rerunning the Swarm
+- First run ``` $ docker machine init #This initializes the deault machine to be the docker manager of the swarm```  
+- Next run the command ``` $ docker-machine ssh default "docker swarm init --advertise-addr 192.168.99.100" #This outputs a token need to connect other docker-machines to the swarm ```  
 
  
 
