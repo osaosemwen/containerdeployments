@@ -163,7 +163,7 @@ you should run this commands to make sure all is good, you have the right node f
 and 
 ``` $ docker node ls  
 
-![node ls](https://user-images.githubusercontent.com/17884787/38710818-2471b0ce-3e90-11e8-85bb-53473aff7b60.png)
+![node ls](https://user-images.githubusercontent.com/17884787/38710905-92ba74c6-3e90-11e8-8ecb-75af9db3b779.png)
 
 #### Deploying a stack on the swarm
 
