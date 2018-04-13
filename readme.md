@@ -161,7 +161,7 @@ you should run this commands to make sure all is good, you have the right node f
     
 ``` $ docker-machine ls ```
 and 
-``` $ docker node ls  
+``` $ docker node ls ```  
 
 ![node ls](https://user-images.githubusercontent.com/17884787/38710905-92ba74c6-3e90-11e8-8ecb-75af9db3b779.png)
 
