@@ -177,6 +177,28 @@ This application can be accessed on all 4 nodes, using eachs IP and the applicat
 
 ![dockerswarm1](https://user-images.githubusercontent.com/17884787/38712575-a62d3ff2-3e9a-11e8-9376-864f950e95e2.png)
 
+#### Clean up
+Take down the application and remove each machine from the swarm adding  "--force" to the swarm manager
+
+- ``` $ docker stack rm mikedockerpractise ``` 
+- ``` $ docker-machine ssh dev "docker swarm leave" ```
+- ``` $ docker-machine ssh default "docker swarm leave --force" ```
+
+### Running Stacks
+
+We would make use of different stack, this time the docker-compose.yml file the difference between this and the other stack is we added containers for visualizing, and volumes. 
+
+simply run the stack using 
+
+``` $ docker stack deploy -c docker-compose.yml mikedockerpractise ```
+
+check the application on any of your machines using similar port as above, you should have something similar to the figure below:
+
+![docker-swarm visualizer](https://user-images.githubusercontent.com/17884787/38714257-366360f8-3ea3-11e8-9de6-f793fd5f1cd4.png)
+
+
+
+
 
 
 
