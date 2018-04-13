@@ -219,11 +219,13 @@ The application visualizer shold show 9 active containers, 7 web, one visualizer
 
 you can check the number of visits using any of the nodes in the swarm e.g.
 
-``` http:192.168.99.103:80 ```
+``` http:192.168.99.100:80 ```
 
 you would have similar results 
 
 ![number of visits](https://user-images.githubusercontent.com/17884787/38715735-dfd4fcda-3eaa-11e8-86fe-02417a67de50.png)
+
+### Deploy your App
 
 
 
