@@ -150,17 +150,19 @@ or simply run:
 
 - Next use the command below to join each docker-machine to the swarm, changing "dev" for each.
  
-``` $ docker-machine ssh dev "docker swarm join --token <put the copied token here> <ip-just as provided from docker swarm init>:2377"
+``` $ docker-machine ssh dev "docker swarm join --token <put the copied token here> <ip-just as provided from docker swarm init>:2377" ```
 
 After running this for all 3 other machines you would have completely created your swarm across all 4 machines with the default as the manager.
 
 should in case you prefer another node as the swarm manger either follow the instructions you are given from the "docker swarm init" earlier used or use follow the instruction from 
 
 ``` $ docker-machine env test1 ``` 
-you should run this commands to make sure all is good, you have the right node for your swarm manager and no errors
+
+You should run this commands to make sure all is good, you have the right node for your swarm manager and no errors
     
 ``` $ docker-machine ls ```
-and 
+and
+ 
 ``` $ docker node ls ```  
 
 ![node ls](https://user-images.githubusercontent.com/17884787/38710905-92ba74c6-3e90-11e8-8ecb-75af9db3b779.png)
@@ -169,7 +171,7 @@ and
 
 Run the command earlier used for the swarm
 
-``` $ docker stack deploy -c docker-compose-1.yml mikedockerpractise 
+``` $ docker stack deploy -c docker-compose-1.yml mikedockerpractise ``` 
  
 
 
