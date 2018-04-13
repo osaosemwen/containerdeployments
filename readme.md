@@ -172,7 +172,11 @@ and
 Run the command earlier used for the swarm
 
 ``` $ docker stack deploy -c docker-compose-1.yml mikedockerpractise ``` 
- 
+This application can be accessed on all 4 nodes, using eachs IP and the applications port number 5050.   
+ you would have similar results as earlier, with each deploying the load balancer service such that you can reach the application on all nodes:
+
+![dockerswarm1](https://user-images.githubusercontent.com/17884787/38712575-a62d3ff2-3e9a-11e8-9376-864f950e95e2.png)
+
 
 
 
