@@ -194,11 +194,36 @@ simply run the stack using
 
 check the application on any of your machines using similar port as above, you should have something similar to the figure below:
 
+``` http://localhost:5050 ``` or replace localhost with your dockermachines IP.
+
 ![docker-swarm visualizer](https://user-images.githubusercontent.com/17884787/38714257-366360f8-3ea3-11e8-9de6-f793fd5f1cd4.png)
 
+``` $ docker stack ps mikedockerpractise ``` this should give you a result similar to this shown below, this confirms the visualizer and the swarm deployments of the nodes
 
+![docker stack ps](https://user-images.githubusercontent.com/17884787/38714547-c383c92c-3ea4-11e8-9855-469778c51b2a.png)
 
+#### Counting number of visits
 
+Look into the file "docker-compose-3.yml" redis has been added to the compose file, the redis is deployed on the default as noted on the placement line, the information of the redis is stored in a file ./data on the defaults docker-machine if you donot create this folder when the docker restarted and the swarm is redployed, the data would be erased. To avoid this, the compose file instructs the storage to be external and otherwise a temp storage is used on the machines RAM.
+you can configure the redis using its "port 6379", you can create this folder using 
+
+``` $ docker-machine ssh default "mkdir ./data" ```
+
+#### Run the new stack
+
+``` $ docker stack deploy -c docker-compose-3.yml mikedockerpractice ```
+
+The application visualizer shold show 9 active containers, 7 web, one visualizer and one redis as shown below.
+
+![screen shot 2018-04-12 at 11 28 56 pm](https://user-images.githubusercontent.com/17884787/38715630-54411ba4-3eaa-11e8-9729-0cea8787019b.png)
+
+you can check the number of visits using any of the nodes in the swarm e.g.
+
+``` http:192.168.99.103:80 ```
+
+you would have similar results 
+
+![number of visits](https://user-images.githubusercontent.com/17884787/38715735-dfd4fcda-3eaa-11e8-86fe-02417a67de50.png)
 
 
 
