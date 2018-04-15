@@ -236,7 +236,7 @@ This will require a cloud providers, such as Amazon Web Services or Azure.
 I would chose, AWS, for this tutorial, this is because I have an accont on it, in case you are using it from a company, you could try 
 
 Please refer to this repository for this next part
-
+``` https://github.com/osaosemwen/awsdockersdeployments.git ```
 
 
 
