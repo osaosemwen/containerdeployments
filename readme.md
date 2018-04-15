@@ -2,7 +2,7 @@
 
 ![dockerswarm on aws cloud simple usecase](https://user-images.githubusercontent.com/17884787/38647160-ecbde85a-3db8-11e8-849d-600f782d8dc2.png)
 
-# Use Case 1: Deploy an application and scale it accross various VMs using docker.
+# Use Case 1: Deploy an application and scale it across various VMs using docker.
 
 #### Prequisites:
 
@@ -225,10 +225,17 @@ you would have similar results
 
 ![number of visits](https://user-images.githubusercontent.com/17884787/38715735-dfd4fcda-3eaa-11e8-86fe-02417a67de50.png)
 
+In case: you may want to check the state of your swarm containers using 
+
+``` $ docker swarm ps mikedockerpractice ```
+
 ### Deploy your App
 
+This will require a cloud providers, such as Amazon Web Services or Azure. 
 
+I would chose, AWS, for this tutorial, this is because I have an accont on it, in case you are using it from a company, you could try 
 
+Please refer to this repository for this next part
 
 
 
